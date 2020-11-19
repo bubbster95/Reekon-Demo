@@ -3,7 +3,6 @@ let count = 0
 
 populateCarosel = () => {
     let caroselImg = imageObj.carosel;
-    console.log('populate')
     let carosel = document.querySelector('.home-carosel');
 
     caroselImg.map((image, index) => {
@@ -19,7 +18,7 @@ populateCarosel = () => {
 }
 
 currentSlide = (caroselImg) => {
-document.getElementById(count).className+= ' current-slide'
+document.getElementById(count).className = 'carosel-image current-slide'
 let slideShow = setInterval(() => nextSlide(caroselImg), 1000*10)
 
 }
@@ -36,13 +35,3 @@ nextSlide = (caroselImg) => {
         previousImage.classList.remove('current-slide')
     }
 }
-
-// loadTitle = () => {
-//     console.log('loadTitle')
-//     setTimeout(firstTitle, 1000);
-//     setTimeout(secondTitle, 3000)
-// }
-
-// firstTitle = () => {
-//     firstTitle
-// }
