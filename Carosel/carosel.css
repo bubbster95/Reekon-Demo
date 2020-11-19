@@ -52,3 +52,9 @@
     /* left: 40px; */
     color: rgba(241, 181, 52, 0.8);
 }
+
+@media screen and (max-device-width: 700px) {
+    .carosel-title-one, .carosel-title-two {
+        font-size: 25pt;
+    }
+}
