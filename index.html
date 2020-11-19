@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REEKON.tools Trial</title>
+
+    <link rel="stylesheet" href="index/index.css">
+    <link rel="stylesheet" href="Carosel/carosel.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="info/info.css">
+    <link rel="stylesheet" href="contact.css">
+
+    <script src="index/index.js"></script>
+    <script src="Carosel/carosel.js"></script>
+    <script src="images.js"></script>
+    <script src="info/info.js"></script>
+
+</head>
+<body onload="populateCarosel()" onscroll="infoEvents()">
+    <!-- Header -->
+    <header class="header-wrapper"> 
+        <img class="logo" onclick="scrollUpTo('home')" src="./assets/Branding-Logos/MainLogo.png"></img> 
+        <!-- Nav Buttons -->
+        <nav class='nav-wrapper'>
+            <button
+            class="nav-button"
+            id='nav-home'
+            onclick="scrollUpTo('home')">
+            Home
+            </button>
+
+            <button
+            class="nav-button"
+            id='nav-indiegogo'
+            onclick="window.open('https://www.indiegogo.com/projects/m1-caliber-a-better-way-to-measure?utm_source=website&utm_medium=pa&utm_campaign=reekonmain#/')">
+            Pre-Order
+            </button>
+
+            <button
+            class="nav-button"
+            id='nav-info'
+            onclick="scrollUpTo('info')">
+            Info
+            </button>
+
+            <button
+            class="nav-button"
+            id='nav-contact'
+            onclick="scrollUpTo('contact')">
+            Contact
+            </button>
+        </nav>
+        <!-- Tripple Lines Div -->
+        <div class="hamburger-icon" onClick="hamburger()">
+            <div class="bar" id="top"></div>
+            <div class="bar" id="middle"></div>
+            <div class="bar" id="bottom"></div>
+        </div>
+    </header>
+
+    <!-- Home -->
+    <section id="home">
+        <div class="home-carosel-wrapper">
+            <div class="home-carosel"></div>
+            <h1 class="carosel-title-one">Measure Once,</h1>
+            <h1 class="carosel-title-two">Only Once.</h1>
+        </div>
+        <div class="sign-up">
+            <h1 class="sign-up-title">SIGN UP FOR OUR MAILING LIST TO STAY INFORMED!</h1>
+            <input class="email-blast" type="email" placeholder="Your email">
+            <button class="send-me-deals" type="submit" value="Submit" onclick="sendMeDeals()">Send Me Deals</button>
+        </div>
+        <div class="indiegogo-info">
+            <h1 class="indiegogo-title">Pre Order now on</h1>
+            <button class="indiegogo-button" onclick="window.open('https://www.indiegogo.com/projects/m1-caliber-a-better-way-to-measure?utm_source=website&utm_medium=pa&utm_campaign=reekonmain#/')">IndieGoGo</button>
+            <h2 class="indiegogo-sub">Save more than 20%</h2>
+        </div>
+    </section>
+    <!-- Info -->
+    <section id="info">
+        <div class='intro'>
+            <h1 class="intro-title">Who are these guys!?</h1>
+            <img class="center-image" src="assets/Images/REEKONTeam.jpg"></img>
+            <p class="intro-text">We are REEKON Tools.
+                Conceived by Carpenters, Designed by MIT Engineers, and Built in Boston, we are changing the game for power and hand tools.
+            </p>
+        </div>
+        <div class="m1-intro">
+            <div class="banner" style="background-image: url('assets/Images/M1CaliberIntro.png');"></div>
+            <div class="info-box right">
+                <img class="right-image" src="assets/Images/m1Specs.jpg"></img>
+                <p class='left-text'>The <b>M1 Caliber</b> measuring device eliminates the need to measure and mark materials, <b>significantly lowering your time to make cuts</b> from your list, <b>increasing safety</b> by keeping everything measurement-related in a centralized location, and is <b>hassle-free</b> allowing you to measure even without your tape measure and marking pencil handy.
+                    The M1's simplicity, intuitiveness, and usefulness makes you wonder <b>"how does this not exist already?"</b>
+                </p>
+            </div>
+
+            <div class="info-box left">
+                <img class="left-image" src="assets/Images/M1VariousAngles.jpg"></img>
+                <p class='left-text'>The <b>M1 Caliber is a fully integrated, patent-pending, measuring tool</b> that clamps to almost any kind of saw fence and outputs measurements of materials slid underneath its wheel on a large, backlit, LCD screen.
+                    This <b>Augmented Tool</b> is more accurate, faster to use, and safer than traditional methods.
+                    Its <b>integrated clamp</b> allows the M1 to attach to most saws and flat surfaces, dramatically increasing your saw's capability, with <b>one click of the clamp!</b>
+                </p>
+            </div>
+            
+            <div class="info-box right">
+                <img class="right-image" src="assets/Images/m1InAction.gif"></img>
+                <p class='left-text'>The M1 measures by <b>sliding material underneath it.</b>
+                    The blade width (and resultant kerf) is <b>automatically added to any measurement</b> taken with the device and can be programmed to match whatever blade you are using in a matter of seconds.
+                    It can display <b>both Metric and English measurements and is more accurate and has more resolution</b> than a tape measure.
+                    The M1 can make <b>angled cuts, beveled cuts, and, of course, straight cuts!</b>
+                </p>
+            </div>
+            <div class="info-box left">
+                <img class="center-image" src="assets/Images/coreIdeasM1.jpg"></img>
+                <p class='left-text'>After testing the M1 Caliber with over 2 dozen people and logged over 500 hours of cut time on the device, we are confident in its ability to perform in the field.
+                    <b>We are a customer-driven company and make sure all of the products can perform in the field</b> under real-world job site conditions and beyond professional standards.
+                </p>
+            </div>
+        </div>
+        
+    </section>
+
+    <!--Contact -->
+    <section id="contact">
+        <div class="contact-info">
+            <h1 class="contact-text">Questions? Shoot us an email at contact@reekon.tools</h1>
+        </div>
+        <div class="contact-buttons">
+            <div
+            class="social-icons"
+            onclick="window.open('https://www.instagram.com/reekontools/')"
+            style="background-image: url('assets/Social-Icons/InstaSmall.png');">
+            </div>
+            <div
+            class="social-icons"
+            onclick="window.open('https://www.facebook.com/reekontools/')"
+            style="background-image: url('assets/Social-Icons/Facebook.png');">
+            </div>
+            <div
+            class="social-icons"
+            onclick="window.open('https://www.youtube.com/channel/UCROy_Az2Xro56xk4Ummxl7Q')"
+            style="background-image: url('assets/Social-Icons/Youtube.png');">
+            </div>
+            <div
+            class="social-icons"
+            onclick="window.open('https://www.tiktok.com/@reekontools')"
+            style="background-image: url('assets/Social-Icons/TickTok.png');">
+            </div>
+            <div
+            class="social-icons"
+            onclick="window.open('https://twitter.com/REEKONTools')"
+            style="background-image: url('assets/Social-Icons/Twitter.png');">
+            </div>
+            <div
+            class="social-icons"
+            onclick="window.open('https://www.linkedin.com/company/reekontools/')"
+            style="background-image: url('assets/Social-Icons/linkedInIcon.png');">
+            </div>
+        </div> 
+    </section>
+</body>
+</html>

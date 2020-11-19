@@ -1,0 +1,89 @@
+#info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    background-color: white;
+}
+
+.intro {
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+    font-family: 'Arial Narrow Bold', sans-serif;
+}
+
+.intro-title {
+    color: rgb(241, 180, 52);
+    font-size: 25pt;
+    margin: 50px;
+}
+
+.intro-text, .left-text {
+    font-family: 'Arial Narrow Bold', sans-serif;
+    font-size: 15pt;
+    margin: 20px;
+}
+
+.banner {
+    width: 100%;
+    margin: 20px auto;
+    height: 20vw;
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat-x;
+}
+
+.info-box{
+    position: relative;
+    display: block;
+    background-color: rgba(241, 181, 52, 0.1);
+    padding: 20px 0px;
+    opacity: 0;
+    transition: all 2s;
+}
+
+.right {
+    right: -30px;
+}
+
+.left {
+    right: 30px;
+}
+
+.show-box {
+    opacity: 100;
+    right: 0;
+}
+
+.right-image {
+    background-size: cover;
+    background-position: center;
+    float: right;
+    width: 50%;
+    margin: 10px;
+    border-left: 4px solid rgb(241, 180, 52);
+}
+
+.left-image {
+    background-size: cover;
+    background-position: center;
+    float: left;
+    width: 50%;
+    margin: 10px;
+    border-right: 4px solid rgb(241, 180, 52);
+}
+
+
+.left-image, .right-image {
+    max-width: 300px;
+}
+
+.center-image {
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
