@@ -18,6 +18,10 @@ populateCarosel = () => {
 }
 
 currentSlide = (caroselImg) => {
+if (document.getElementById(3).className === 'carosel-image current-slide') {
+    document.getElementById(3).style.display = 'none';
+    document.getElementById(3).className = 'hidden-logo';
+}
 document.getElementById(count).className = 'carosel-image current-slide'
 let slideShow = setInterval(() => nextSlide(caroselImg), 1000*10)
 
