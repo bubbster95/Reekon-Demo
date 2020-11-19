@@ -47,6 +47,7 @@ body {
     border: none;
     font-family: 'Arial Narrow Bold', sans-serif;
     color: white;
+    transition: all .5s;
 }
 
 .nav-button:hover {
