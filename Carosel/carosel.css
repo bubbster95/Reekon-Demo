@@ -38,7 +38,7 @@
     z-index: 1;
     width: 90%;
     height: 40px;
-    margin: auto;
+    margin: 20px;
     font-size: 40pt;
     font-family: Impact;
     text-align: left;
@@ -65,5 +65,6 @@
 @media screen and (min-width: 1000px) {
     .carosel-title-one, .carosel-title-two {
         left: 25%;
+        margin: 0;
     }
 }
